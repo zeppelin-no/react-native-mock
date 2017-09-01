@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 import EdgeInsetsPropType from '../propTypes/EdgeInsetsPropType';
 import View from './View';
 
-const TouchableWithoutFeedback = React.createClass({
-  propTypes: {
+class TouchableWithoutFeedback extends React.Component {
+  propTypes = {
     accessible: PropTypes.bool,
     accessibilityComponentType: PropTypes.oneOf(View.AccessibilityComponentType),
     accessibilityTraits: PropTypes.oneOfType([
@@ -63,10 +63,11 @@ const TouchableWithoutFeedback = React.createClass({
      * views.
      */
     hitSlop: EdgeInsetsPropType,
-  },
+  }
+
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = TouchableWithoutFeedback;

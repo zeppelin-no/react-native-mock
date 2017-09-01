@@ -9,8 +9,8 @@ import EdgeInsetsPropType from '../propTypes/EdgeInsetsPropType';
 import ImageStylePropTypes from '../propTypes/ImageStylePropTypes';
 import ImageResizeMode from '../propTypes/ImageResizeMode';
 
-const Image = React.createClass({
-  propTypes: {
+class Image extends React.Component {
+  propTypes = {
     style: styleSheetPropType(ImageStylePropTypes),
     /**
      * `uri` is a string representing the resource identifier for the image, which
@@ -107,9 +107,11 @@ const Image = React.createClass({
      * Invoked when load either succeeds or fails
      */
     onLoadEnd: PropTypes.func,
-  },
-  mixins: [NativeMethodsMixin],
-  statics: {
+  }
+
+  mixins = [NativeMethodsMixin]
+
+  statics = {
     resizeMode: ImageResizeMode,
     getSize(uri, success, failure) {
 
@@ -117,10 +119,11 @@ const Image = React.createClass({
     prefetch(uri) {
 
     }
-  },
+  }
+
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = Image;

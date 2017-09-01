@@ -12,8 +12,8 @@ let _hidden = false;
 let _networkActivityIndicatorVisible = false;
 let _translucent = false;
 
-const StatusBar = React.createClass({
-  propTypes: {
+class StatusBar extends React.Component {
+  propTypes = {
     animated: PropTypes.bool,
     barStyle: PropTypes.oneOf(['default', 'light-content']),
     backgroundColor: ColorPropType,
@@ -21,9 +21,9 @@ const StatusBar = React.createClass({
     networkActivityIndicatorVisible: PropTypes.bool,
     showHideTransition: PropTypes.oneOf(['fade', 'slide']),
     translucent: PropTypes.bool
-  },
+  }
 
-  statics: {
+  statics = {
     setBackgroundColor(backgroundColor, animated) {
       _backgroundColor = backgroundColor;
     },
@@ -63,11 +63,11 @@ const StatusBar = React.createClass({
     __getTranslucent() {
       return _translucent;
     }
-  },
+  }
 
   render() {
     return null;
   }
-});
+}
 
 module.exports = StatusBar;

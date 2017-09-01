@@ -10,9 +10,9 @@ import ColorPropType from '../propTypes/ColorPropType';
 
 const DrawerConsts = UIManager.AndroidDrawerLayout.Constants;
 
-const DrawerLayoutAndroid = React.createClass({
+class DrawerLayoutAndroid extends React.Component {
 
-  propTypes: {
+  propTypes = {
     ...View.propTypes,
     /**
      * Determines whether the keyboard gets dismissed in response to a drag.
@@ -90,26 +90,26 @@ const DrawerLayoutAndroid = React.createClass({
      * effect on API 21+.
      */
     statusBarBackgroundColor: ColorPropType,
-  },
+  }
 
-  mixins: [NativeMethodsMixin],
+  mixins = [NativeMethodsMixin]
 
-  statics: {
+  statics = {
     positions: DrawerConsts.DrawerPosition
-  },
+  }
 
   openDrawer() {
     // do nothing
-  },
+  }
 
   closeDrawer() {
     // do nothing
-  },
+  }
 
   render() {
     return null;
   }
 
-});
+}
 
 module.exports = DrawerLayoutAndroid;

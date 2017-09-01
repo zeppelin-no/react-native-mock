@@ -18,8 +18,8 @@ const NavigationType = {
 
 const JSNavigationScheme = WebViewManager.JSNavigationScheme;
 
-const WebView = React.createClass({
-  propTypes: {
+class WebView extends React.Component {
+  propTypes = {
     ...View.propTypes,
     url: PropTypes.string,
     html: PropTypes.string,
@@ -112,33 +112,33 @@ const WebView = React.createClass({
      * @platform ios
      */
     allowsInlineMediaPlayback: PropTypes.bool,
-  },
+  }
 
-  statics: {
+  statics = {
     JSNavigationScheme,
     NavigationType,
-  },
+  }
 
   getWebViewHandle() {
     // TODO(lmr): React.findNodeHandle
     return React.findNodeHandle(this.refs[RCT_WEBVIEW_REF]);
-  },
+  }
 
   reload() {
     // do nothing
-  },
+  }
 
   goForward() {
     // do nothing
-  },
+  }
 
   goBack() {
     // do nothing
-  },
+  }
 
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = WebView;

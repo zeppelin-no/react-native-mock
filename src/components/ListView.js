@@ -8,8 +8,8 @@ import ListViewDataSource from '../api/ListViewDataSource';
 const SCROLLVIEW_REF = 'listviewscroll';
 
 
-const ListView = React.createClass({
-  propTypes: {
+class ListView extends React.Component {
+  propTypes = {
     ...ScrollView.propTypes,
 
     dataSource: PropTypes.instanceOf(ListViewDataSource).isRequired,
@@ -111,12 +111,13 @@ const ListView = React.createClass({
      * @platform ios
      */
     stickyHeaderIndices: PropTypes.arrayOf(PropTypes.number),
-  },
-  mixins: [ScrollResponder.Mixin, TimerMixin],
+  }
 
-  statics: {
+  mixins = [ScrollResponder.Mixin, TimerMixin]
+
+  statics = {
     DataSource: ListViewDataSource,
-  },
+  }
 
   /**
    * Exports some data, e.g. for perf investigations or analytics.
@@ -129,11 +130,11 @@ const ListView = React.createClass({
       renderedRows: this.state.curRenderedRowsCount,
       visibleRows: Object.keys(this._visibleRows).length,
     };
-  },
+  }
 
   scrollTo(destY, destX) {
     this.getScrollResponder().scrollResponderScrollTo(destX || 0, destY || 0);
-  },
+  }
 
   /**
    * Provides a handle to the underlying scroll responder to support operations
@@ -143,25 +144,25 @@ const ListView = React.createClass({
     return this.refs[SCROLLVIEW_REF] &&
       this.refs[SCROLLVIEW_REF].getScrollResponder &&
       this.refs[SCROLLVIEW_REF].getScrollResponder();
-  },
+  }
 
   setNativeProps(props) {
     this.refs[SCROLLVIEW_REF].setNativeProps(props);
-  },
+  }
 
   getDefaultProps() {
     return {
       renderScrollComponent: (props) => <ScrollView {...props} />
     };
-  },
+  }
 
   getInnerViewNode() {
     return this.refs[SCROLLVIEW_REF].getInnerViewNode();
-  },
+  }
 
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = ListView;

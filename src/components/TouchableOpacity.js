@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 
 import TouchableWithoutFeedback from './TouchableWithoutFeedback';
 
-const TouchableOpacity = React.createClass({
-  propTypes: {
+class TouchableOpacity extends React.Component {
+  propTypes = {
     ...TouchableWithoutFeedback.propTypes,
 
     /**
@@ -15,11 +15,11 @@ const TouchableOpacity = React.createClass({
      * active. Defaults to 0.2.
      */
     activeOpacity: PropTypes.number,
-  },
+  }
 
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = TouchableOpacity;

@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import createMockComponent from './createMockComponent';
 
-const Picker = React.createClass({
-  propTypes: {
+class Picker extends React.Component {
+  propTypes = {
     children: PropTypes.node
-  },
-  statics: {
+  }
+
+  statics = {
     Item: createMockComponent('Picker.Item')
-  },
+  }
+
   render() {
     return null;
   }
-});
+}
 
 module.exports = Picker;

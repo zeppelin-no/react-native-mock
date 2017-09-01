@@ -3,20 +3,22 @@ import PropTypes from 'prop-types';
 
 import TouchableWithoutFeedback from './TouchableWithoutFeedback';
 
-const TouchableNativeFeedback = React.createClass({
-  propTypes: {
+class TouchableNativeFeedback extends React.Component {
+  propTypes = {
     ...TouchableWithoutFeedback.propTypes,
 
     background: PropTypes.object
-  },
-  statics: {
+  }
+
+  statics = {
     SelectableBackground() {},
     SelectableBackgroundBorderless() {},
     Ripple(color, borderless) {}
-  },
+  }
+
   render() {
     return null;
   }
-});
+}
 
 module.exports = TouchableNativeFeedback;

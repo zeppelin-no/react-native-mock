@@ -20,18 +20,18 @@ const statics = {
   forceTouchAvailable,
 };
 
-const View = React.createClass({
-  propTypes: ViewPropTypes,
+class View extends React.Component {
+  propTypes = ViewPropTypes
 
-  mixins: [NativeMethodsMixin],
+  mixins = [NativeMethodsMixin]
 
-  statics: {
+  statics = {
     ...statics,
-  },
+  }
 
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = View;

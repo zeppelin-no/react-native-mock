@@ -9,8 +9,8 @@ import NativeMethodsMixin from '../mixins/NativeMethodsMixin';
 
 const stylePropType = styleSheetPropType(TextStylePropTypes);
 
-const Text = React.createClass({
-  propTypes: {
+class Text extends React.Component {
+  propTypes = {
     /**
      * Used to truncate the text with an ellipsis after computing the text
      * layout, including line wrapping, such that the total number of lines
@@ -43,12 +43,13 @@ const Text = React.createClass({
      * @platform ios
      */
     allowFontScaling: PropTypes.bool,
-  },
-  mixins: [NativeMethodsMixin],
+  }
+
+  mixins = [NativeMethodsMixin]
 
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = Text;
