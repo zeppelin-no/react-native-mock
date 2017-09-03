@@ -2,14 +2,13 @@
  * https://github.com/facebook/react-native/blob/master/Libraries/Components/ActivityIndicator/ActivityIndicator.js
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import NativeMethodsMixin from '../mixins/NativeMethodsMixin';
 import View from './View';
 import ColorPropType from '../propTypes/ColorPropType';
 
-const { PropTypes } = React;
-
-const ActivityIndicator = React.createClass({
-  propTypes: {
+class ActivityIndicator extends React.Component {
+  propTypes = {
     ...View.propTypes,
     /**
      * Whether to show the indicator (true, the default) or hide it (false).
@@ -36,11 +35,11 @@ const ActivityIndicator = React.createClass({
      *   {nativeEvent: { layout: {x, y, width, height}}}.
      */
     onLayout: PropTypes.func,
-  },
-  mixins: [NativeMethodsMixin],
+  }
+  mixins = [NativeMethodsMixin]
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = ActivityIndicator;
