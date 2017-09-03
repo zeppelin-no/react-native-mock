@@ -2,9 +2,8 @@
   "name": "react-native-mock",
   "version": "0.3.1",
   "description": "A fully mocked and test-friendly version of react native",
-  "main": "build/react-native.js",
+  "main": "src/react-native.js",
   "scripts": {
-    "prepublish": "npm run build",
     "test": "npm run lint && npm run mocha",
     "mocha": "mocha --require babel-core/register 'test/**/*.js'",
     "mocha:watch": "npm run test -- --watch",
