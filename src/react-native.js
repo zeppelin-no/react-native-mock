@@ -101,21 +101,20 @@ const ReactNative = {
   EdgeInsetsPropType: require('./propTypes/EdgeInsetsPropType'),
   PointPropType: require('./propTypes/PointPropType'),
   NavigationExperimental: require('./Libraries/NavigationExperimental'),
-  ViewPropTypes: require('./propTypes/ViewPropTypes'),
+  ViewPropTypes: require('./propTypes/ViewPropTypes')
 };
-
 
 // See http://facebook.github.io/react/docs/addons.html
 const ReactNativeAddons = {
   // LinkedStateMixin: require('react-addons-linked-state-mixin') deprecated,
-  Perf: require('ReactPerf'),
+  // Perf: require('ReactPerf'),
   // PureRenderMixin: require('react-addons-pure-render-mixin') deprecated,
   TestModule: require('./NativeModules/TestModule'),
   TestUtils: require('react-dom/test-utils'),
   // TODO(lmr): not sure where to find this
   // batchedUpdates: require('ReactUpdates').batchedUpdates, deprecated
   // cloneWithProps: require('react-addons-clone-with-props'), deprecated
-  createFragment: require('react-addons-create-fragment'),
+  createFragment: require('react-addons-create-fragment')
   // update: require('react-addons-update'), deprecated
 };
 
