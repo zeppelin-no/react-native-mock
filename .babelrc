@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "flow",
+    "react-native",
+    "airbnb",
+    {
+      "plugins": ["transform-class-properties"]
+    }
+  ]
+}

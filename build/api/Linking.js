@@ -108,8 +108,8 @@ return Promise.resolve(_LinkingIOS2['default'].initialURL);
 
 url){
 (0,_invariant2['default'])(
-typeof url==='string','Invalid URL: should be a string. Was: '+
-url);
+typeof url==='string','Invalid URL: should be a string. Was: '+String(
+url));
 
 (0,_invariant2['default'])(
 url,

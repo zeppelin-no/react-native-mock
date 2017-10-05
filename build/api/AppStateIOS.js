@@ -2,7 +2,7 @@ var _DeviceEventEmitter=require('../plugins/DeviceEventEmitter');var _DeviceEven
 var _AppState=require('../NativeModules/AppState');var _AppState2=_interopRequireDefault(_AppState);
 var _invariant=require('invariant');var _invariant2=_interopRequireDefault(_invariant);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{'default':obj};}
 
-var logError=function(){function logError(error){return console.error(error);}return logError;}();
+var logError=function logError(error){return console.error(error);};
 
 var _eventHandlers={
 change:new Map(),

@@ -108,18 +108,18 @@ ViewPropTypes:require('./propTypes/ViewPropTypes')};
 // See http://facebook.github.io/react/docs/addons.html
 var ReactNativeAddons={
 // LinkedStateMixin: require('react-addons-linked-state-mixin') deprecated,
-Perf:require('react-addons-perf'),
-PureRenderMixin:require('react-addons-pure-render-mixin'),
+Perf:require('ReactPerf'),
+// PureRenderMixin: require('react-addons-pure-render-mixin') deprecated,
 TestModule:require('./NativeModules/TestModule'),
-TestUtils:require('react-addons-test-utils'),
+TestUtils:require('react-dom/test-utils'),
 // TODO(lmr): not sure where to find this
 // batchedUpdates: require('ReactUpdates').batchedUpdates, deprecated
 // cloneWithProps: require('react-addons-clone-with-props'), deprecated
-createFragment:require('react-addons-create-fragment'),
-update:require('react-addons-update')};
+createFragment:require('react-addons-create-fragment')
+// update: require('react-addons-update'), deprecated
+};
 
-
-_extends(ReactNative,_react2['default'],{addons:ReactNativeAddons});
+_extends(ReactNative,{addons:ReactNativeAddons});
 
 // Global properties defined in https://github.com/facebook/react-native/blob/master/Libraries/Core/InitializeCore.js
 (0,_defineGlobalProperty2['default'])('XMLHttpRequest',function(){return require('./Libraries/Network/XMLHttpRequest');});

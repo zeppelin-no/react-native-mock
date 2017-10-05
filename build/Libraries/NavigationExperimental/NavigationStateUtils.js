@@ -92,7 +92,7 @@ throw new Error('invalid routes to replace');
 var nextIndex=index===undefined?routes.length-1:index;
 
 if(state.routes.length===routes.length&&state.index===nextIndex){
-var compare=function(){function compare(route,ii){return routes[ii]===route;}return compare;}();
+var compare=function compare(route,ii){return routes[ii]===route;};
 if(state.routes.every(compare)){
 return state;
 }

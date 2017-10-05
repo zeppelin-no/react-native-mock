@@ -1,4 +1,4 @@
-var _test=function(){function _test(url){return true;}return _test;}();
+var _test=function _test(url){return true;};
 var LinkingManger={
 openURL:function(){function openURL(url){
 return Promise.resolve(true);

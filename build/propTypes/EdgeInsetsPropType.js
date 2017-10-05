@@ -1,15 +1,13 @@
 
 
 
-var _react=require('react');var _react2=_interopRequireDefault(_react);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{'default':obj};}var
+var _propTypes=require('prop-types');var _propTypes2=_interopRequireDefault(_propTypes);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{'default':obj};}
 
-PropTypes=_react2['default'].PropTypes;/**
+var EdgeInsetsPropType=_propTypes2['default'].shape({
+top:_propTypes2['default'].number,
+left:_propTypes2['default'].number,
+bottom:_propTypes2['default'].number,
+right:_propTypes2['default'].number});/**
  * https://github.com/facebook/react-native/blob/master/Libraries/StyleSheet/EdgeInsetsPropType.js
- */var EdgeInsetsPropType=PropTypes.shape({
-top:PropTypes.number,
-left:PropTypes.number,
-bottom:PropTypes.number,
-right:PropTypes.number});
-
-
+ */
 module.exports=EdgeInsetsPropType;

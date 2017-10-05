@@ -30,7 +30,9 @@
     "babel-cli": "6.9.0",
     "babel-core": "6.9.0",
     "babel-eslint": "6.0.4",
+    "babel-plugin-transform-class-properties": "6.24.1",
     "babel-preset-airbnb": "2.0.0",
+    "babel-preset-flow": "6.23.0",
     "babel-preset-react-native": "1.8.0",
     "chai": "3.5.0",
     "eslint": "2.10.2",
@@ -40,7 +42,7 @@
     "eslint-plugin-react": "5.1.1",
     "eslint-plugin-react-native": "1.0.2",
     "mocha": "2.5.3",
-    "react": "16.0.0-alpha.x",
+    "react": "^16.0.0-alpha",
     "react-native": ">=0.43.0"
   },
   "dependencies": {
@@ -52,8 +54,8 @@
     "warning": "^2.1.0"
   },
   "peerDependencies": {
-    "react": "16.0.0-alpha.x",
-    "react-native": "*",
-    "react-dom": "16.0.0-alpha.x"
+    "react": "^16.0.0-alpha",
+    "react-dom": "^16.0.0-alpha",
+    "react-native": "*"
   }
 }

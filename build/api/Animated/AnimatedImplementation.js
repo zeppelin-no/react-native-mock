@@ -1128,7 +1128,7 @@ animation]);
 
 function event(argMapping,config){
 return function(){for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}
-var traverse=function(){function traverse(recMapping,recEvt,key){
+var traverse=function traverse(recMapping,recEvt,key){
 if(typeof recEvt==='number'){
 (0,_invariant2['default'])(
 recMapping instanceof AnimatedValue,
@@ -1149,7 +1149,7 @@ return;
 for(var i in recMapping){
 traverse(recMapping[i],recEvt[i],i);
 }
-}return traverse;}();
+};
 argMapping.forEach(function(mapping,idx){
 traverse(mapping,args[idx],'arg'+idx);
 });
