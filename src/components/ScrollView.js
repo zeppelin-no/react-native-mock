@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import EdgeInsetsPropType from '../propTypes/EdgeInsetsPropType';
 import PointPropType from '../propTypes/PointPropType';
 import ScrollResponder from '../mixins/ScrollResponder';
@@ -7,13 +8,11 @@ import ViewStylePropTypes from '../propTypes/ViewStylePropTypes';
 import ScrollViewManager from '../NativeModules/ScrollViewManager';
 import styleSheetPropType from '../propTypes/StyleSheetPropType';
 
-const { PropTypes } = React;
-
 const SCROLLVIEW = 'ScrollView';
 const INNERVIEW = 'InnerScrollView';
 
-const ScrollView = React.createClass({
-  propTypes: {
+class ScrollView extends React.Component {
+  propTypes = {
     ...View.propTypes,
     /**
      * Controls whether iOS should automatically adjust the content inset
@@ -284,13 +283,13 @@ const ScrollView = React.createClass({
      * See [RefreshControl](http://facebook.github.io/react-native/docs/refreshcontrol.html).
      */
     refreshControl: PropTypes.element,
-  },
+  }
 
-  mixins: [ScrollResponder.Mixin],
+  mixins = [ScrollResponder.Mixin]
 
   setNativeProps(props) {
     this.refs[SCROLLVIEW].setNativeProps(props);
-  },
+  }
 
   /**
    * Returns a reference to the underlying scroll responder, which supports
@@ -300,25 +299,25 @@ const ScrollView = React.createClass({
    */
   getScrollResponder() {
     return this;
-  },
+  }
 
   getInnerViewNode() {
     return React.findNodeHandle(this.refs[INNERVIEW]);
-  },
+  }
 
   endRefreshin() {
     ScrollViewManager.endRefreshing(
       React.findNodeHandle(this)
     );
-  },
+  }
 
   scrollTo(destY = 0, destX = 0, animated = true) {
 
-  },
+  }
 
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = ScrollView;

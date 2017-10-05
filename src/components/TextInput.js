@@ -1,14 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TextInputState from '../api/TextInputState';
 import TimerMixin from 'react-timer-mixin';
 import NativeMethodsMixin from '../mixins/NativeMethodsMixin';
 import View from './View';
 import Text from './Text';
 
-const { PropTypes } = React;
-
-const TextInput = React.createClass({
-  propTypes: {
+class TextInput extends React.Component {
+  propTypes = {
     ...View.propTypes,
     /**
      * Can tell TextInput to automatically capitalize certain characters.
@@ -228,22 +227,27 @@ const TextInput = React.createClass({
      * @platform android
      */
     underlineColorAndroid: PropTypes.string,
-  },
-  mixins: [NativeMethodsMixin, TimerMixin],
-  statics: {
+  }
+
+  mixins = [NativeMethodsMixin, TimerMixin]
+
+  statics = {
     State: TextInputState,
-  },
+  }
+
   isFocused() {
     // TODO(lmr): React.findNodeHandle
     return TextInputState.currentlyFocusedField() ===
       React.findNodeHandle(this.refs.input);
-  },
+  }
+
   clear() {
 
-  },
+  }
+
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = TextInput;

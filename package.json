@@ -2,9 +2,8 @@
   "name": "react-native-mock",
   "version": "0.3.1",
   "description": "A fully mocked and test-friendly version of react native",
-  "main": "build/react-native.js",
+  "main": "src/react-native.js",
   "scripts": {
-    "prepublish": "npm run build",
     "test": "npm run lint && npm run mocha",
     "mocha": "mocha --require babel-core/register 'test/**/*.js'",
     "mocha:watch": "npm run test -- --watch",
@@ -15,7 +14,12 @@
     "type": "git",
     "url": "git+https://github.com/RealOrangeOne/react-native-mock.git"
   },
-  "keywords": ["react", "react-native", "mock", "testing"],
+  "keywords": [
+    "react",
+    "react-native",
+    "mock",
+    "testing"
+  ],
   "author": "Jake Howard <git@theorangeone.net>",
   "license": "MIT",
   "bugs": {
@@ -36,25 +40,20 @@
     "eslint-plugin-react": "5.1.1",
     "eslint-plugin-react-native": "1.0.2",
     "mocha": "2.5.3",
-    "react": "^15.4.0",
-    "react-native": "^0.38.0"
+    "react": "16.0.0-alpha.x",
+    "react-native": ">=0.43.0"
   },
   "dependencies": {
     "cubic-bezier": "^0.1.2",
     "invariant": "^2.2.1",
     "keymirror": "^0.1.1",
     "raf": "^3.2.0",
-    "react-addons-create-fragment": "^15.4.0",
-    "react-addons-perf": "^15.4.0",
-    "react-addons-pure-render-mixin": "^15.4.0",
-    "react-addons-test-utils": "^15.4.0",
-    "react-addons-update": "^15.4.0",
-    "react-dom": "16.0.0-alpha.12",
-    "react-timer-mixin": "^0.13.3",
+    "react-addons-create-fragment": "latest",
     "warning": "^2.1.0"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
+    "react": "16.0.0-alpha.x",
+    "react-native": "*",
+    "react-dom": "16.0.0-alpha.x"
   }
 }

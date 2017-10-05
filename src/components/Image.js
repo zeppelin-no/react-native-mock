@@ -2,16 +2,15 @@
  * https://github.com/facebook/react-native/blob/master/Libraries/Image/Image.ios.js
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import styleSheetPropType from '../propTypes/StyleSheetPropType';
 import NativeMethodsMixin from '../mixins/NativeMethodsMixin';
 import EdgeInsetsPropType from '../propTypes/EdgeInsetsPropType';
 import ImageStylePropTypes from '../propTypes/ImageStylePropTypes';
 import ImageResizeMode from '../propTypes/ImageResizeMode';
 
-const { PropTypes } = React;
-
-const Image = React.createClass({
-  propTypes: {
+class Image extends React.Component {
+  propTypes = {
     style: styleSheetPropType(ImageStylePropTypes),
     /**
      * `uri` is a string representing the resource identifier for the image, which
@@ -108,9 +107,11 @@ const Image = React.createClass({
      * Invoked when load either succeeds or fails
      */
     onLoadEnd: PropTypes.func,
-  },
-  mixins: [NativeMethodsMixin],
-  statics: {
+  }
+
+  mixins = [NativeMethodsMixin]
+
+  statics = {
     resizeMode: ImageResizeMode,
     getSize(uri, success, failure) {
 
@@ -118,10 +119,11 @@ const Image = React.createClass({
     prefetch(uri) {
 
     }
-  },
+  }
+
   render() {
     return null;
-  },
-});
+  }
+}
 
 module.exports = Image;

@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import createMockComponent from './createMockComponent';
 import View from './View';
 
@@ -7,7 +8,7 @@ const NavigatorSceneConfigType = PropTypes.shape({
   springFriction: PropTypes.number,
   springTension: PropTypes.number,
   defaultTransitionVelocity: PropTypes.number,
-  animationInterpolators: React.PropTypes.object,
+  animationInterpolators: PropTypes.object,
 });
 
 const NavigatorSceneConfigs = {
@@ -23,8 +24,8 @@ const NavigatorSceneConfigs = {
   VerticalDownSwipeJump: NavigatorSceneConfigType
 };
 
-const Navigator = React.createClass({
-  propTypes: {
+class Navigator extends React.Component {
+  propTypes = {
     /**
      * Optional function that allows configuration about scene animations and
      * gestures. Will be invoked with the route and the routeStack and should
@@ -88,16 +89,17 @@ const Navigator = React.createClass({
      * Styles to apply to the container of each scene
      */
     sceneStyle: View.propTypes.style,
-  },
+  }
 
-  statics: {
+  statics = {
     BreadcrumbNavigationBar: createMockComponent('NavigatorBreadcrumbNavigationBar'),
     NavigationBar: createMockComponent('NavigatorNavigationBar'),
     SceneConfigs: NavigatorSceneConfigs,
-  },
+  }
+
   render() {
     return null;
   }
-});
+}
 
 module.exports = Navigator;
