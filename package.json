@@ -2,7 +2,7 @@
   "name": "react-native-mock",
   "version": "0.3.1",
   "description": "A fully mocked and test-friendly version of react native",
-  "main": "src/react-native.js",
+  "main": "build/react-native.js",
   "scripts": {
     "test": "npm run lint && npm run mocha",
     "mocha": "mocha --require babel-core/register 'test/**/*.js'",
@@ -14,12 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/RealOrangeOne/react-native-mock.git"
   },
-  "keywords": [
-    "react",
-    "react-native",
-    "mock",
-    "testing"
-  ],
+  "keywords": ["react", "react-native", "mock", "testing"],
   "author": "Jake Howard <git@theorangeone.net>",
   "license": "MIT",
   "bugs": {
